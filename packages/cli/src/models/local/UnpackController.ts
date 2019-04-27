@@ -35,7 +35,7 @@ export default class UnpackController {
       await git.pull('origin', 'stable');
       spinner.succeed();
 
-      spinner = ora(`Unpacking kit`).start();
+      spinner = ora('Unpacking kit').start();
       // always delete .git folder 
       config.ignore.push(`.git`);
       // delete all files/folders from ignore
