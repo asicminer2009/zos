@@ -61,7 +61,7 @@ export default class UnpackController {
 
     try {
       return JSON.parse(await request(url
-        .replace(".git", "/stable/kit.json")
+        .replace('.git', '/stable/kit.json')
         .replace("github.com", "raw.githubusercontent.com")
       ));
     } catch(e) {
