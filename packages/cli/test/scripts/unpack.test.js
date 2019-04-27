@@ -10,7 +10,7 @@ import unpack from '../../src/scripts/unpack';
 const simpleGit = patch('simple-git/promise');
 
 const repo = 'zeppelinos/zepkit';
-const url = `https://github.com/zeppelinos/zepkit.git`;
+const url = 'https://github.com/zeppelinos/zepkit.git';
 
 describe('unpack script', function() {
   let gitMock;
