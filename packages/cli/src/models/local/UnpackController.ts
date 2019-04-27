@@ -62,7 +62,7 @@ export default class UnpackController {
     try {
       return JSON.parse(await request(url
         .replace('.git', '/stable/kit.json')
-        .replace("github.com", "raw.githubusercontent.com")
+        .replace('github.com', 'raw.githubusercontent.com')
       ));
     } catch(e) {
       e.message = `Failed to verify ${url}. Details: ${e.message}`;
