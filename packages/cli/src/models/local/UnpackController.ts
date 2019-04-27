@@ -46,7 +46,7 @@ export default class UnpackController {
       await exec(config.hooks['post-unpack']);
       spinner.succeed();
 
-      stdout(`The kit is ready to use. Amazing!`);
+      stdout('The kit is ready to use. Amazing!');
       stdout(`Please, continue at ${url}`);
     } catch(e) {
       // TODO: remove all files from directory on fail except .zos.lock
