@@ -37,7 +37,7 @@ export default class UnpackController {
 
       spinner = ora('Unpacking kit').start();
       // always delete .git folder 
-      config.ignore.push(`.git`);
+      config.ignore.push('.git');
       // delete all files/folders from ignore
       const paths = config.ignore.map(file => path.join(workingDirPath, file));
       const exists = await Promise.all(paths.map(path => pathExists(path)));
