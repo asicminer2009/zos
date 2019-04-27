@@ -41,7 +41,7 @@ export default class UnpackController {
       // delete all files/folders from ignore
       const paths = config.ignore.map(file => path.join(workingDirPath, file));
       const exists = await Promise.all(paths.map(path => pathExists(path)));
-      await Promise.all(exists.map((ext, i)=> ext ? remove(paths[i]) : null ).filter(Boolean));
+      await Promise.all(exists.map((ext, i) => ext ? remove(paths[i]) : null).filter(Boolean));
       // run kit commands like `npm install`
       await exec(config.hooks['post-unpack']);
       spinner.succeed();
